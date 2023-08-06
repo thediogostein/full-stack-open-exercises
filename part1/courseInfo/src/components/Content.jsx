@@ -1,7 +1,7 @@
 import React from 'react';
 import Part from './Part';
 
-function Content({ parts }) {
+const Content = ({ parts }) => {
   console.log(parts);
   return (
     <div>
@@ -11,6 +11,6 @@ function Content({ parts }) {
       <Part name={parts[2].name} exercises={parts[2].exercises} />
     </div>
   );
-}
+};
 
 export default Content;
