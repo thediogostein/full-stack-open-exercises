@@ -1,0 +1,34 @@
+sequenceDiagram
+  participant browser
+  participant server
+  
+  browser to server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+  activate server
+  server to browser: 302(asks the browser to do a new HTTP GET to https://studies.cs.helsinki.fi/exampleapp/notes)
+
+  browser to server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+  activate server
+  server to browser: HTML document
+  deactivate server
+
+  browser to server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+  activate server
+  server to browser: CSS file
+  deactivate server
+
+  browser to server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+  activate server
+  server to browser: Javascript file
+  deactivate server
+
+  browser to server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+  activate server
+  server to browser: JSON file(list items)
+  deactivate server
+
+  browser renders notes file with added note included
+
+
+
+
+
