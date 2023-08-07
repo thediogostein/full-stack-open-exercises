@@ -4,6 +4,10 @@ Repo for submitting exercises for the Full Stack Open curriculum.
 
 https://fullstackopen.com/
 
+## Part 0:
+
+(does not contain any links)
+
 ## Part 1:
 
 ### Course info App
