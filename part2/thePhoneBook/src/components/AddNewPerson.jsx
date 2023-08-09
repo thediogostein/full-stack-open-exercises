@@ -7,6 +7,7 @@ export const AddNewPerson = ({ handleSubmit, handleChange, newPerson }) => {
         <div>
           <label htmlFor="name">name:</label>
           <input
+            type="text"
             id="name"
             onChange={handleChange}
             name="name"
@@ -14,13 +15,13 @@ export const AddNewPerson = ({ handleSubmit, handleChange, newPerson }) => {
           />
         </div>
         <div>
-          <label htmlFor="phone">number:</label>
+          <label htmlFor="number">number:</label>
           <input
-            id="phone"
+            id="number"
             type="text"
             onChange={handleChange}
-            name="phone"
-            value={newPerson.phone}
+            name="number"
+            value={newPerson.number}
           />
         </div>
       </div>
