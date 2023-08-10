@@ -3,6 +3,8 @@ import axios from 'axios';
 import { List } from './components/List';
 import { Search } from './components/Search';
 
+import './global.css';
+
 function App() {
   const [search, setSearch] = useState('');
   const [countries, setCountries] = useState([]);
@@ -27,6 +29,10 @@ function App() {
       )
     );
   }, [search]);
+
+  const showCountryDetails = (country) => {
+    console.log(`show details for ${country}`);
+  };
 
   return (
     <>

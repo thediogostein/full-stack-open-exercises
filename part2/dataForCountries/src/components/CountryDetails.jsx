@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const CountryDetails = ({
-  countries,
+  // countries,
   name,
   capital,
   area,
@@ -14,11 +14,13 @@ export const CountryDetails = ({
       <p>capital {capital}</p>
       <p>area {area}</p>
       <h3>languages:</h3>
-      <ul>
-        {Object.values(languages).map((value) => (
-          <li>{value}</li>
-        ))}
-      </ul>
+      {
+        <ul>
+          {Object.values(languages).map((value) => (
+            <li>{value}</li>
+          ))}
+        </ul>
+      }
       <img src={flagSrc} alt={name} />
     </article>
   );

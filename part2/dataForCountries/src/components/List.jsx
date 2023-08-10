@@ -8,9 +8,16 @@ export const List = ({ countries, searchQuery }) => {
     elements = <p>Too many countries</p>;
   } else if (countries.length > 1 && countries.length <= 10) {
     elements = (
-      <ul>
+      <ul className="countryList">
         {countries.map((country) => (
-          <ListItem name={country.name.common} key={country.name.common} />
+          <ListItem
+            key={country.name.common}
+            name={country.name.common}
+            capital={country.capital}
+            area={country.area}
+            languages={country.languages}
+            flagSrc={country.flags.png}
+          />
         ))}
       </ul>
     );
