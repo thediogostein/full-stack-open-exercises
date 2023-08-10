@@ -10,6 +10,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsloading] = useState(true);
   const [filteredCountries, setFilteredCountries] = useState([]);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     const API_URL = 'https://studies.cs.helsinki.fi/restcountries/api';
@@ -19,6 +20,9 @@ function App() {
       .then((response) => {
         setCountries(response.data);
         setIsloading(!isLoading);
+      })
+      .catch((err) => {
+        setErrorMessage(err);
       });
   }, []);
 
@@ -30,17 +34,15 @@ function App() {
     );
   }, [search]);
 
-  const showCountryDetails = (country) => {
-    console.log(`show details for ${country}`);
-  };
-
   return (
     <>
       <Search search={search} setSearch={setSearch} />
 
-      {!isLoading && (
+      {!isLoading && !errorMessage && (
         <List countries={filteredCountries} searchQuery={search} />
       )}
+
+      {errorMessage && <p>error connecting to database</p>}
     </>
   );
 }
