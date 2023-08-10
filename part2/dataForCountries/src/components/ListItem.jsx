@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const ListItem = () => {
-  return <li>ListItem</li>;
+export const ListItem = ({ name }) => {
+  return <li>{name}</li>;
 };

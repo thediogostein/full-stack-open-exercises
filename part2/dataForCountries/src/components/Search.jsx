@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 export const Search = ({ search, setSearch }) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
