@@ -1,6 +1,8 @@
 import { CountryDetails } from './CountryDetails';
 import { ListItem } from './ListItem';
 
+import styles from './List.module.css';
+
 export const List = ({ countries, searchQuery }) => {
   let elements;
 
@@ -8,7 +10,7 @@ export const List = ({ countries, searchQuery }) => {
     elements = <p>Too many countries</p>;
   } else if (countries.length > 1 && countries.length <= 10) {
     elements = (
-      <ul className="countryList">
+      <ul className={styles.list}>
         {countries.map((country) => (
           <ListItem
             key={country.name.common}

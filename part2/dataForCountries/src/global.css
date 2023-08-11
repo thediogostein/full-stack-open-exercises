@@ -1,10 +1,32 @@
-.countryList {
-  padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.countryItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0;
+html,
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mainHeader {
+  padding: 2rem 0;
+  background-color: #09090b;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.45rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
 }

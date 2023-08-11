@@ -35,15 +35,19 @@ function App() {
   }, [search]);
 
   return (
-    <>
-      <Search search={search} setSearch={setSearch} />
+    <div>
+      <header className="mainHeader">
+        <Search search={search} setSearch={setSearch} />
+      </header>
 
-      {!isLoading && !errorMessage && (
-        <List countries={filteredCountries} searchQuery={search} />
-      )}
+      <main className="wrapper">
+        {!isLoading && !errorMessage && (
+          <List countries={filteredCountries} searchQuery={search} />
+        )}
 
-      {errorMessage && <p>error connecting to database</p>}
-    </>
+        {errorMessage && <p>error connecting to database</p>}
+      </main>
+    </div>
   );
 }
 

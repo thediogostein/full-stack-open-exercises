@@ -1,0 +1,47 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background-color: rgb(236, 229, 229);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.item p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.item button {
+  background-color: #6b21a8;
+}
+
+.item button:hover,
+.item button:focus {
+  background-color: #7e22ce;
+}
+
+.itemDetails {
+  background-color: rgb(247, 244, 244);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.itemDetails button {
+  background-color: #075985;
+}
+
+.itemDetails button:hover,
+.itemDetails button:focus {
+  background-color: #0369a1;
+}
+
+.btnContainer {
+  display: flex;
+}
+
+.btnContainer button {
+  margin-left: auto;
+}
